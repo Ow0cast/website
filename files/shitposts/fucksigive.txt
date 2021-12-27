@@ -1,0 +1,6 @@
+📂 Local Disk (C:)
+└📂 Program Files (x86)
+⠀└📂 common
+⠀⠀└📂 Things I Give
+⠀⠀⠀└📂 Fucks
+⠀        └ ⚠ This folder is empty.
