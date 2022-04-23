@@ -1,0 +1,111 @@
+block scripts
+    script(src='https://kit.fontawesome.com/00a6c3cacf.js' crossorigin='anonymous')
+    script(src='https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js')
+
+block metadata
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+block others
+    title the recycle bin
+    style.
+        @font-face {
+            font-family: "ffdin";
+            src: url("./fonts/consolas.woff") format("woff");
+        }
+        @keyframes swipein {
+            0% {opacity:0;margin-top:30px;}
+            25% {opacity:0;margin-top:15px;}
+            100% {opacity:1;margin-top:-5px;}
+        }
+        @keyframes swipeinn {
+            0% {opacity:0;margin-top:80px;}
+            25% {opacity:0;margin-top:45px;}
+            100% {opacity:1;margin-top:0px;}
+        }
+        @keyframes grswipe {
+            0% {opacity:0;font-size:23pt;padding-top:1.5pt;padding-bottom:1.5pt;filter: blur(5px);}
+            100% {opacity:1;font-size:26pt;padding-top:0pt;padding-bottom:0pt;filter: blur(0px);}
+        }
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        body {
+            background-color: #1c1c1c;
+            color: white;
+            font-family: "Arial"
+        }
+        .topbar {
+            background-color: #2c2c2c;
+            padding: 5px;
+            padding-left:15px;
+            margin-bottom: 25px;
+        }
+        .article {
+            font-size: 13pt;
+            margin-left:15px;
+            background-color: #0eeba1;
+            width: 450px;
+            color: black;
+            border: 0px white solid;
+            border-radius:5px;
+            padding-top: 25px;
+            padding-bottom:25px;
+            padding-left:25px;
+            height:75px;
+        }
+        .media {
+            max-height:30px;
+            max-width: 60px;
+            border: 0px white solid;
+            border-radius: 5px;
+            background-color:white;
+            opacity:0;
+            margin: 0;
+            float: left;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation-name: swipein;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            margin-left:450px;
+        }
+        .content {
+            /* margin-right:70%; */
+            opacity:0;
+            animation-name: swipeinn;
+            animation-duration: 1s;
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float:left;
+            height: 100%;
+            margin-top: -15px;
+        }
+        .tbt {
+            background: -webkit-linear-gradient(0.5turn, #28edb2, #2891ed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size:250px;
+            opacity: 0;
+            font-size:26pt;
+            filter: blur(5px);
+            animation-name: grswipe;
+            animation-duration: 0.5s;
+            animation-delay: 0.25s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+        }
+block tbar
+    .topbar
+        h1.tbt
+            a(href='/') the recycle bin
+
+block stuff
